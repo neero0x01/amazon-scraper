@@ -1,0 +1,71 @@
+{
+  "name": "your-project",
+  "version": "1.0.0",
+  "description": "Boost productivity and save time with Eslint and prettier already configured for you",
+  "main": "server.js",
+  "type": "module",
+  "eslintConfig": {
+    "extends": [
+      "wesbos"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "semi": false,
+          "trailingComma": "es5",
+          "singleQuote": true,
+          "printWidth": 120,
+          "tabWidth": 2
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix frontend",
+    "app": "concurrently \" npm run server \" \" npm run client \"",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neero0x01/node-boilerplate.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "Boilerplate"
+  ],
+  "author": "Muhammad Ahmad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neero0x01/node-boilerplate/issues"
+  },
+  "homepage": "https://github.com/neero0x01/node-boilerplate#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-wesbos": "^1.0.1",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.1"
+  },
+  "dependencies": {
+    "awesome-cli-alerts": "^1.0.2",
+    "axios": "^0.21.1",
+    "cherio": "^1.0.0-rc.2",
+    "concurrently": "^6.2.0",
+    "express": "^4.17.1"
+  }
+}
